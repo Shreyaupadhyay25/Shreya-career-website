@@ -7,12 +7,25 @@
 
     <title>Shreya's Site</title>
     <style>
-     
+      /* Add top padding to accommodate the fixed-top navbar */
+      body {
+        padding-top: 60px; /* Adjust this value according to your navbar height */
+      }
     </style>
     
   </head>
   
     <body>
+
+       <nav class="navbar bg-body-tertiary shadow-sm fixed-top bg-white">
+         <div class="container-fluid">
+           <a class="navbar-brand" href="#">
+             <img src="/static/logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+             Shreya
+           </a>
+         </div>
+       </nav>
+
       <div class="container">
       <h1 class="text-center mt-2 mb-4">Find your dream job now</h1>
       <img class = "img-fluid" id ="banner" src = "https://85410d83-c04f-4645-ba3d-005e6f3c7627-00-2ywjcu65qv3g.sisko.replit.dev/static/banner.jpg" height=300>
@@ -35,8 +48,10 @@
       
       </p>
         <div class="text-center">
-      <button type="button" class="btn btn-primary">Contact Us</button>
+      <a href="mailto:hello@jovian.ai?subject=Questions%20About%20Job%20openings&body=Name%3A%0D%0A%0D%0AQuestions%3A" type="button" class="btn btn-primary">Contact Us</a>
         </div>
       </div>
+
+      {% include 'footer.html'%}
     </body>
 </html>
